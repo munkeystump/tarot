@@ -61,7 +61,7 @@ void loop()
       delay(90);                                            //delay to allow reader to begin successfully
       lastTag = readTag(reader);
       tag[reader] = cardLookup(lastTag);
-      allreaders[reader].end();
+      allreaders[reader].end();     // THIS METHOD NEEDS ADDING TO THE LIBRARY I THINK AS IT DOESN'T HAVE A HALT(end) METHOD AS STANDARD
     }
   
     if (itissolved(tag, objects)) {                           //check to see if all objects are placed
